@@ -6,10 +6,13 @@ export const router = createBrowserRouter([
   {
     path: '/' ,
     Component: Home,
+    loader: ()=> fetch(`https://openapi.programming-hero.com/api/plants`),
     children:[
         {
             path: '/about',
-            Component: About
+            
+            Component: About,
+            
     },
 ],
   },
