@@ -12,7 +12,7 @@ const Home = () => {
     // }, [])
     // console.log(plants)
     const data = useLoaderData()
-    console.log(data)
+    // console.log(data)
     return (
         <div>
            
@@ -26,7 +26,7 @@ const Home = () => {
                 </div>
                 
                 <Outlet>
-                <About></About>
+                
 
                 </Outlet>
             </main>

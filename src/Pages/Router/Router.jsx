@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import Home from "../Home/Home";
 import About from "../About/About";
+import PlantDetails from "../PlantDetails/PlantDetails";
 
 export const router = createBrowserRouter([
   {
@@ -8,12 +9,17 @@ export const router = createBrowserRouter([
     Component: Home,
     loader: ()=> fetch(`https://openapi.programming-hero.com/api/plants`),
     children:[
-        {
-            path: '/about',
-            
-            Component: About,
-            
-    },
+    //     {
+    //   path: '/plantsDetails',
+    //   Component: PlantDetails
+    // },
+    
 ],
+
   },
+  {
+      path: '/plantsDetails/:id',
+      // loader: () => fetch(`https://openapi.programming-hero.com/api/plant/`),
+      Component: PlantDetails
+    },
 ]);
