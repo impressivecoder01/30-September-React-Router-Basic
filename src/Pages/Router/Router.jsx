@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
   },
   {
       path: '/plantsDetails/:id',
-      // loader: () => fetch(`https://openapi.programming-hero.com/api/plant/`),
+      loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/plant/${params.id}`),
       Component: PlantDetails
     },
 ]);
