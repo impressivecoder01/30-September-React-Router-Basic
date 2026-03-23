@@ -2,11 +2,13 @@ import { createBrowserRouter } from "react-router";
 import Home from "../Home/Home";
 import About from "../About/About";
 import PlantDetails from "../PlantDetails/PlantDetails";
+import Loading from "../../Components/Loading";
 
 export const router = createBrowserRouter([
   {
     path: '/' ,
     Component: Home,
+    hydrateFallbackElement: <Loading></Loading>,
     loader: ()=> fetch(`https://openapi.programming-hero.com/api/plants`),
     children:[
     //     {
