@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const PlantCard = ({plant}) => {
     const {name, image, category, price, id} = plant
     return (
-        <div className="card bg-base-100 w-96 shadow-sm">
+        <div className="card bg-base-100  shadow-sm">
   <figure className='h-44 overflow-hidden bg-gray-800'>
     <img className='w-full h-full object-cover'
       src={image}
@@ -17,7 +17,7 @@ const PlantCard = ({plant}) => {
         <p>Price: {price}</p>
     </div>
     <div className="card-actions justify-end">
-      <Link to={`/plantsDetails/${id}`} className="btn btn-primary">View Details</Link>
+      <Link state={plant} to={`/plantsDetails/${id}`} className="btn btn-primary">View Details</Link>
     </div>
   </div>
 </div>

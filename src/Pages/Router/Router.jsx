@@ -3,6 +3,7 @@ import Home from "../Home/Home";
 import About from "../About/About";
 import PlantDetails from "../PlantDetails/PlantDetails";
 import Loading from "../../Components/Loading";
+import Card from "../Card";
 
 export const router = createBrowserRouter([
   {
@@ -24,4 +25,8 @@ export const router = createBrowserRouter([
       loader: ({params}) => fetch(`https://openapi.programming-hero.com/api/plant/${params.id}`),
       Component: PlantDetails
     },
+    {
+      path: '/card',
+      Component: Card
+    }
 ]);
